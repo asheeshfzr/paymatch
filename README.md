@@ -10,7 +10,7 @@
 1. **User–Transaction Matching** → Identify the most likely user(s) for a given transaction.
 2. **Semantic Transaction Search** → Retrieve transactions matching free-text queries (e.g., *"consulting fee in July"*).
 
-The system combines **fuzzy search, embeddings, BM25, vector search, and optional LLM enhancements (GPT)** to achieve high recall & precision.
+The system combines **fuzzy search, embeddings, BM25, vector search, and LLM enhancements (GPT)** to achieve high recall & precision.
 
 ---
 
@@ -19,7 +19,7 @@ The system combines **fuzzy search, embeddings, BM25, vector search, and optiona
 ✅ **Hybrid Matching** — Fuzzy matching, trigram index, embeddings, and similarity scoring.
 ✅ **Semantic Search** — BM25 + embeddings for lexical & semantic relevance.
 ✅ **LLM Enhancements** — GPT for name extraction, query expansion, and reranking.
-✅ **Optional Vector DB** — Scalable search with **Qdrant ANN indexing**.
+✅ **Vector DB** — Scalable search with **Qdrant ANN indexing**.
 ✅ **FastAPI Server** — REST API with Swagger docs.
 ✅ **Production-Ready Roadmap** — Scalability, observability, and compliance recommendations.
 
@@ -81,7 +81,7 @@ Create a `.env` file in the project root:
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
 OPENAI_CHAT_MODEL=gpt-4o-mini
 
-# Optional configs
+# configs
 QDRANT_HOST=localhost
 QDRANT_PORT=6333
 ```
@@ -157,7 +157,7 @@ Response:
 
 ### Task 2 — Semantic Transaction Search
 
-* **Pipeline**: BM25 → Embeddings → (optional) Qdrant ANN → (optional) LLM Expansion/Rerank.
+* **Pipeline**: BM25 → Embeddings → Qdrant ANN → LLM Expansion/Rerank.
 * **LLM Role**: Improves recall (expansion) & precision (rerank).
 * **Limitations**:
 
@@ -192,7 +192,7 @@ Response:
 ## 🔹 Tech Stack
 
 * **Backend**: FastAPI + Uvicorn
-* **Search**: BM25, Embeddings, Qdrant (optional)
+* **Search**: BM25, Embeddings, Qdrant
 * **LLM**: OpenAI GPT (for parsing, expansion, reranking)
 * **Infra (future-ready)**: Docker, Kubernetes, Prometheus, Vault
 

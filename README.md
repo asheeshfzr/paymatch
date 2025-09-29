@@ -1,5 +1,3 @@
----
-
 # 🔹 PayMatch: Intelligent User–Transaction Mapping & Semantic Search
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)

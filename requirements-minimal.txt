@@ -1,0 +1,29 @@
+# Minimal requirements for basic functionality
+# Core ML and NLP
+sentence-transformers==3.0.1
+torch==2.2.2
+transformers==4.41.2
+huggingface-hub==0.24.6
+scikit-learn==1.5.0
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Data Processing
+pandas==2.2.2
+rapidfuzz==3.9.4
+python-dotenv==1.0.1
+
+# LLM and AI
+openai>=1.12.0,<2.0.0
+
+# Configuration and Validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Robustness and Reliability
+backoff>=2.2.1
+
+# Utilities
+typing_extensions==4.12.0
